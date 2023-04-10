@@ -2,57 +2,56 @@ const  handleMenuTab1 = async ()=>{
     const response = await fetch('https://617bd868d842cf001711c0fe.mockapi.io/item');
     const myJson = await response.json();
     let newJson = [];
-    if(myJson.length>12)
-        newJson = myJson;
-    const html = newJson.map((items) =>{
-        // console.log(items);
-    return `
-    <div class="product-card">
-                                <div class="product-card--image">
-                                    <img src="./assets/images/coffee1.jpg" alt="">
-                                </div>
-                                <div class="product-card--info">
-                                    <span id="product-name"><b>${items.name}</b></span>
-                                    <div class="product-card--footer">
-                                        <span>$${items.price}</span>
-                                        <div class="product-card--button" onclick="openCardPopup('${items.name}', '${items.description}','${items.price}', '${items.image}')">
-                                            <i class="fas fa-plus" ></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    `;
-                }).join(" ");
-    let a = document.querySelector("#first-menu-tab");
-    a.innerHTML = html;          
+    // if(myJson.length>12)
+    //     newJson = myJson.slice(0,12);
+    // const html = newJson.map((items) =>{
+    //     // console.log(items);
+    // return `
+    // <div class="product-card">
+    //                             <div class="product-card--image">
+    //                                 <img src="./assets/images/coffee1.jpg" alt="">
+    //                             </div>
+    //                             <div class="product-card--info">
+    //                                 <span id="product-name"><b>${items.name}</b></span>
+    //                                 <div class="product-card--footer">
+    //                                     <span>$${items.price}</span>
+    //                                     <div class="product-card--button" onclick="openCardPopup('${items.name}', '${items.description}','${items.price}', '${items.image}')">
+    //                                         <i class="fas fa-plus" ></i>
+    //                                     </div>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    // `;
+    //             }).join(" ");
+    // let a = document.querySelector("#first-menu-tab");
+    // a.innerHTML = html;          
 };
-
 
 const  handleMenuTab2 = async ()=>{
     const response = await fetch('https://617bd868d842cf001711c0fe.mockapi.io/item2');
     const myJson = await response.json();
     let newJson = [];
-    if(myJson.length>12)
-        newJson = myJson;
-    const html = newJson.map((items) =>{
-        // console.log(items);
-    return `
-    <div class="product-card">
-                                <div class="product-card--image">
-                                    <img src="./assets/images/coffee2.jpg" alt="">
-                                </div>
-                                <div class="product-card--info">
-                                    <span id="product-name"><b>${items.name}</b></span>
-                                    <div class="product-card--footer">
-                                        <span>$${items.price}</span>
-                                        <div class="product-card--button">
-                                            <i class="fas fa-plus"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    `;
-                }).join(" ");
+    // if(myJson.length>12)
+    //     newJson = myJson.slice(0,12);
+    // const html = newJson.map((items) =>{
+    //     // console.log(items);
+    // return `
+    // <div class="product-card">
+    //                             <div class="product-card--image">
+    //                                 <img src="./assets/images/coffee2.jpg" alt="">
+    //                             </div>
+    //                             <div class="product-card--info">
+    //                                 <span id="product-name"><b>${items.name}</b></span>
+    //                                 <div class="product-card--footer">
+    //                                     <span>$${items.price}</span>
+    //                                     <div class="product-card--button">
+    //                                         <i class="fas fa-plus"></i>
+    //                                     </div>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    // `;
+    //             }).join(" ");
     let a = document.querySelector("#second-menu-tab");
     a.innerHTML = html;          
 };
@@ -60,35 +59,63 @@ const  handleMenuTab2 = async ()=>{
 const  handleMenuTab3 = async ()=>{
     const response = await fetch('https://617bd868d842cf001711c0fe.mockapi.io/item3');
     const myJson = await response.json();
+    // let newJson = [];
+    // if(myJson.length>12)
+    //     newJson = myJson.slice(0,12);
+    // const html = newJson.map((items) =>{
+    //     // console.log(items);
+    // return `
+    // <div class="product-card">
+    //                             <div class="product-card--image">
+    //                                 <img src="./assets/images/coffee3.jpg" alt="">
+    //                             </div>
+    //                             <div class="product-card--info">
+    //                                 <span id="product-name"><b>${items.name}</b></span>
+    //                                 <div class="product-card--footer">
+    //                                     <span>$${items.price}</span>
+    //                                     <div class="product-card--button">
+    //                                         <i class="fas fa-plus"></i>
+    //                                     </div>
+    //                                 </div>
+    //                             </div>
+    //                         </div>
+    // `;
+    //             }).join(" ");
+    // let a = document.querySelector("#third-menu-tab");
+    // a.innerHTML = html;          
+};
+
+const  handleNews = async ()=>{
+    const response = await fetch('https://617bd868d842cf001711c0fe.mockapi.io/news');
+    const myJson = await response.json();
     let newJson = [];
-    if(myJson.length>12)
-        newJson = myJson;
-    const html = newJson.map((items) =>{
-        // console.log(items);
-    return `
-    <div class="product-card">
-                                <div class="product-card--image">
-                                    <img src="./assets/images/coffee3.jpg" alt="">
-                                </div>
-                                <div class="product-card--info">
-                                    <span id="product-name"><b>${items.name}</b></span>
-                                    <div class="product-card--footer">
-                                        <span>$${items.price}</span>
-                                        <div class="product-card--button">
-                                            <i class="fas fa-plus"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-    `;
-                }).join(" ");
-    let a = document.querySelector("#third-menu-tab");
-    a.innerHTML = html;          
+    // if(myJson.length>6)
+    //     newJson = myJson.slice(0,6);
+    // const html = newJson.map((items) =>{
+    //     // console.log(items);
+    // return `
+    // <div class="news-card">
+    //                     <img src="./assets/images/news1.jpg" alt="news1">
+    //                     <div class="news-content">
+    //                         <h5>${items.title}</h5>
+    //                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pretium ex ac urna tempor, ac ultrices justo aliquet. Aenean viverra urna eu est tincidunt venenatis. </p>
+    //                         <div class="more-button">
+    //                             <button>
+    //                                 <a href="./newsdetail.html">More</a>
+    //                             </button>
+    //                         </div>
+    //                     </div>
+    //                 </div>
+    // `;
+    //             }).join(" ");
+    // let a = document.querySelector(".news-container");
+    // a.innerHTML = html;          
 };
 
 handleMenuTab1();
 handleMenuTab2();
 handleMenuTab3();
+handleNews();
 
 var $li = $('#pills-tab li').click(function() {
     $li.removeClass('selected');
@@ -165,7 +192,7 @@ const increaseQuantity = (a)=>{
         plus = 1;
     if(size == "l")
         plus = 2;
-
+    console.log(size)
     price = parseFloat(document.querySelector(".price").innerText.slice(1,));
     console.log(plus, " ", price);
     handlesize(plus,price);
@@ -193,7 +220,7 @@ const openCardPopup = (name, description, price,image) =>{
                 <button onclick="cancelCardPopup()">X</button>
             </div>
             <div class="card_popup-information">
-                <img src="./assets/images/coffee1.jpg" alt="">
+                <img src="${image}" alt="">
                 <div class="card_popup-title">
                     <b>${name}</b>
                     <div class="description">
@@ -235,7 +262,7 @@ const openCardPopup = (name, description, price,image) =>{
                 </div>
             </div>
             <div class="addtocard">
-                <span id="totalPrice">$12</span>
+                <span id="totalPrice">${price}</span>
                 <span> - add</span>
             </div>
         </div>`
@@ -283,37 +310,30 @@ const showPromotion = ()=>{
         </div>
         <div class="allcoupon">
             <div class="coupon-container">
-                <img src="./assets/images/coupon10.jpg" alt="coupon 105">
+                <img src="./assets/images/c1.jpg" alt="coupon 105">
                 <div class="coupon-information">
-                    <div class="coupon-description">Giảm 15% từ 3 sản phẩm Cà phê đóng gói/Lon & nước</div>
+                    <div class="coupon-description">Giảm 60%</div>
                     <span>het han trong 2 ngay</span>
                     <button>Apply</button>
                 </div>
             </div>
             <div class="coupon-container">
-                <img src="./assets/images/coupon10.jpg" alt="coupon 105">
+                <img src="./assets/images/c2.jpg" alt="coupon 105">
                 <div class="coupon-information">
-                    <div class="coupon-description">Giảm 15% từ 3 sản phẩm Cà phê đóng gói/Lon & nước</div>
+                    <div class="coupon-description">Giảm 70%</div>
                     <span>het han trong 2 ngay</span>
                     <button>Apply</button>
                 </div>
             </div>
             <div class="coupon-container">
-                <img src="./assets/images/coupon10.jpg" alt="coupon 105">
+                <img src="./assets/images/c3.jpg" alt="coupon 105">
                 <div class="coupon-information">
-                    <div class="coupon-description">Giảm 15% từ 3 sản phẩm Cà phê đóng gói/Lon & nước</div>
+                    <div class="coupon-description">Giảm 50%</div>
                     <span>het han trong 2 ngay</span>
                     <button>Apply</button>
                 </div>
             </div>
-            <div class="coupon-container">
-                <img src="./assets/images/coupon10.jpg" alt="coupon 105">
-                <div class="coupon-information">
-                    <div class="coupon-description">Giảm 15% từ 3 sản phẩm Cà phê đóng gói/Lon & nước</div>
-                    <span>het han trong 2 ngay</span>
-                    <button>Apply</button>
-                </div>
-            </div>
+            
         </div>
         
     </div>
